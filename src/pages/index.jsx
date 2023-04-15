@@ -7,6 +7,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { GoPrimitiveDot } from "react-icons/go";
 import { BsTwitter } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -50,22 +51,24 @@ function DisplayFeatures() {
   return (
     <div className="flex font-poppins justify-center xl:justify-between items-center mx-auto gap-4 flex-wrap">
       {mainFeatures.map((item) => (
-        <div className="w-[290px] text-center bg-basil" key={item.heading}>
-          <div className="relative h-[250px]">
-            <Image
-              src={item.img}
-              alt={item.heading}
-              fill
-              style={{
-                objectFit: "cover",
-              }}
-            />
+        <Link href={item.url} key={item.heading}>
+          <div className="w-[290px] text-center bg-basil">
+            <div className="relative h-[250px]">
+              <Image
+                src={item.img}
+                alt={item.heading}
+                fill
+                style={{
+                  objectFit: "cover",
+                }}
+              />
+            </div>
+            <div className="space-y-4 p-6">
+              <h4 className="font-semibold text-xl">{item.heading}</h4>
+              <p>{item["sub-heading"]}</p>
+            </div>
           </div>
-          <div className="space-y-4 p-6">
-            <h4 className="font-semibold text-xl">{item.heading}</h4>
-            <p>{item["sub-heading"]}</p>
-          </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
@@ -214,24 +217,28 @@ export function Footer() {
 }
 const mainFeatures = [
   {
+    url: "/specialist-services",
     img: "/specialist-services.png",
     heading: "Specialist Services",
     "sub-heading":
       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has English.",
   },
   {
+    url: "/home-care",
     img: "/home-care.png",
     heading: "Home Care",
     "sub-heading":
       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has English.",
   },
   {
+    url: "/specialist-services",
     img: "/community-assistant.png",
     heading: "Community Assistant",
     "sub-heading":
       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has English.",
   },
   {
+    url: "/specialist-services",
     img: "/live-in-care.png",
     heading: "Live in Care",
     "sub-heading":
