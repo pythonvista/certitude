@@ -44,6 +44,7 @@ module.exports = {
         "for-more-info-bg": "url('/for-more-info.png')",
         "about-CCS-bg": "url('/About CCS.png')",
         "types-of-care": "url('/types-of-care.png')",
+        "contact-bg": "url('/contact-bg.jpg')",
       },
     },
   },

@@ -27,7 +27,7 @@ export default function Header() {
             },
             {
               name: "Contact Us",
-              url: "/",
+              url: "/contact-us",
             },
           ].map((item) => (
             <li key={item.name}>
