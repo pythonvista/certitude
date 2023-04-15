@@ -19,7 +19,9 @@ module.exports = {
       black: "#000000",
       palatinate: "#6A205F",
       blueberry: "#4285F4",
+      dandelion: "#F7D673",
       "light-silver": "#D9D9D9",
+      "bright-gray": "#E9E9E9",
       "quick-silver": "#A6A6A6",
       "silver-chalice": "#ABABAB",
       "egyptian-blue": "#1C3AA9",
@@ -40,6 +42,8 @@ module.exports = {
       backgroundImage: {
         "certitude-intro-bg": "url('/certitude-intro.png')",
         "for-more-info-bg": "url('/for-more-info.png')",
+        "about-CCS-bg": "url('/About CCS.png')",
+        "types-of-care": "url('/types-of-care.png')",
       },
     },
   },
