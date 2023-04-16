@@ -95,14 +95,34 @@ export default function Footer() {
           <div className="flex item-center justify-between">
             <ul className="flex gap-4">
               {[
-                "Home",
-                "About Us",
-                "Funding Your Care",
-                "Types of Care",
-                "Contact Us",
-                "Testimonials",
+                {
+                  name: "Home",
+                  url: "/",
+                },
+                {
+                  name: "About Us",
+                  url: "/about-us",
+                },
+                {
+                  name: "Funding Your Care",
+                  url: "/funding-your-care",
+                },
+                {
+                  name: "Types of Care",
+                  url: "/types-of-care",
+                },
+                {
+                  name: "Contact Us",
+                  url: "/contact-us",
+                },
+                {
+                  name: "Testimonials",
+                  url: "/testimonial",
+                },
               ].map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item.name}>
+                  <Link href={item.url}>{item.name}</Link>
+                </li>
               ))}
             </ul>
             <p>Web Design Company</p>

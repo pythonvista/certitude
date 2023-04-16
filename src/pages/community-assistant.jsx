@@ -1,9 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
-import { Header } from "@components";
-import SubHeader from "@components/SubHeader";
-import { Footer, MoreInfo } from "@pages";
+import { Footer, Header, SubHeader } from "@components";
+import { MoreInfo } from "@pages";
 
 export default function CommunityAssistant() {
   return (

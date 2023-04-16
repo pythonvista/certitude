@@ -19,7 +19,7 @@ export default function Header() {
             },
             {
               name: "Funding Your Care",
-              url: "/",
+              url: "/funding-your-care",
             },
             {
               name: "Types of Care",

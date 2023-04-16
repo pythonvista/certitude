@@ -1,8 +1,8 @@
-import { Header } from "@components";
-import SubHeader from "@components/SubHeader";
-import { Footer, MoreInfo } from "@pages";
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+
+import { MoreInfo } from "@pages";
+import { Footer, Header, SubHeader } from "@components";
 
 export default function HomeCare() {
   return (
