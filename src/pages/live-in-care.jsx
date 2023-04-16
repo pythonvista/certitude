@@ -6,7 +6,7 @@ export default function LiveInCare() {
   return (
     <div>
       <Header />
-      <main className="w-[89%] mx-auto mb-10">
+      <main className="w-[89%] max-w-[1700px] mx-auto mb-10">
         <SubHeader title={"Live in Care"} img={"bg-types-of-care"} />
         <MainInfo />
         <MoreInfo />

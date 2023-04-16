@@ -7,7 +7,7 @@ export default function ContactUs() {
   return (
     <div>
       <Header />
-      <main className="w-[89%] mx-auto mb-10 space-y-10">
+      <main className="w-[89%] max-w-[1700px] mx-auto mb-10 space-y-10">
         <SubHeader title={"Contact US"} img={"bg-types-of-care"} />
         <section className="bg-contact-bg p-16">
           <div className="max-w-[600px] ml-auto bg-aegean p-10 font-poppins text-white">

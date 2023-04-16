@@ -16,7 +16,7 @@ export default function Footer() {
   const captchaRef = React.useRef(null);
   return (
     <footer className="bg-basil">
-      <div className="w-[89%] mx-auto font-poppins py-10">
+      <div className="w-[89%] max-w-[1700px] mx-auto font-poppins py-10">
         <div className="bg-white p-6">
           <Image
             src="/asset_cqclogo_update.png"
@@ -41,7 +41,7 @@ export default function Footer() {
           <h4 className="text-center font-medium text-3xl my-5">
             Contact Us Today
           </h4>
-          <div className="flex gap-6 justify-between">
+          <div className="flex gap-6 justify-between flex-wrap">
             <div className="font-light text-lg">
               <h5 className="text-xl font-semibold">Certitude Care Service</h5>
               <p>
@@ -92,8 +92,8 @@ export default function Footer() {
             <FaFacebookF />
             <BsTwitter />
           </div>
-          <div className="flex item-center justify-between">
-            <ul className="flex gap-4">
+          <div className="flex item-center justify-between flex-wrap gap-5">
+            <ul className="flex gap-4 flex-wrap">
               {[
                 {
                   name: "Home",

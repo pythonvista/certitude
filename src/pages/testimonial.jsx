@@ -5,7 +5,7 @@ export default function Testimonial() {
   return (
     <div>
       <Header />
-      <main className="w-[89%] mx-auto mb-10">
+      <main className="w-[89%] max-w-[1700px] mx-auto mb-10">
         <SubHeader
           title={"What our clients say about our services"}
           img={"bg-about-CCS-bg"}

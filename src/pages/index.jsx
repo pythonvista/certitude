@@ -13,7 +13,7 @@ export default function Home() {
           Certitude <span className="text-basil">Care Services</span>
         </h3>
         <HeroDisplay />
-        <div className="w-[89%] mx-auto space-y-10 my-10">
+        <div className="w-[89%] max-w-[1700px] mx-auto space-y-10 my-10">
           <DisplayFeatures />
           <WelcomeCertitude />
           <MoreInfo />
@@ -28,7 +28,7 @@ function HeroDisplay() {
     <div
       className={`${mainOne[0]} h-[550px] flex justify-center items-center bg-no-repeat bg-cover`}
     >
-      <div className="bg-white-90 min-w-[650px] font-segoe py-9 space-y-6 text-maverick">
+      <div className="bg-white-90 max-w-[650px] w-[90%] mx-auto font-segoe p-9 space-y-6 text-maverick">
         <h5 className="text-center font-normal text-2xl">
           Trusted Providers of <br />
           <span className="text-4xl text-center font-bold">
@@ -71,8 +71,8 @@ function DisplayFeatures() {
 
 function WelcomeCertitude() {
   return (
-    <section className="bg-certitude-intro-bg h-[600px] bg-cover bg-no-repeat flex justify-center items-center font-poppins">
-      <div className="w-[750px] mx-auto text-center text-white text-xl">
+    <section className="bg-certitude-intro-bg  bg-cover bg-no-repeat flex justify-center items-center font-poppins ">
+      <div className="w-[90%] max-w-[750px] mx-auto text-center text-white text-xl p-10">
         <h4 className="text-4xl font-bold mb-6">
           Welcome to Certitude Care Service
         </h4>

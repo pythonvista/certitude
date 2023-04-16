@@ -6,15 +6,20 @@ export default function HomeCare() {
   return (
     <div>
       <Header />
-      <main className="w-[89%] mx-auto mb-10">
+      <main className="w-[89%] mx-auto max-w-[1700px] mb-10">
         <SubHeader title={"Home Care"} img={"bg-types-of-care"} />
         <MainInfo />
         <section className="relative my-10">
-          <img
-            src="/contact-bg.jpg"
-            alt="contact-bg"
-            className="h-[356px] absolute inset-0 w-full object-cover"
-          />
+          <div className="h-[356px] absolute inset-0 w-full">
+            <Image
+              src="/contact-bg.jpg"
+              alt="contact-bg"
+              fill
+              style={{
+                objectFit: "cover",
+              }}
+            />
+          </div>
           <div className="bg-aegean relative max-w-[500px] p-10 text-white font-poppins space-y-7 font-light [&_*]:leading-7 top-10 -left-7 ml-auto mb-20">
             <p>
               Home care gives individuals the much deserved extra support,
