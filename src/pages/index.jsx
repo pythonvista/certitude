@@ -204,6 +204,7 @@ export function Footer() {
                 "Funding Your Care",
                 "Types of Care",
                 "Contact Us",
+                "Testimonials",
               ].map((item) => (
                 <li key={item}>{item}</li>
               ))}
