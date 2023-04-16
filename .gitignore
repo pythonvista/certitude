@@ -21,6 +21,7 @@
 /.pnp.cjs
 /.pnp.loader.mjs
 yarn.lock
+/.vscode
 # debug
 npm-debug.log*
 yarn-debug.log*
