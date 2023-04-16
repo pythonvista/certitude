@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Footer, Header } from "@components";
+import { Footer, Header, MoreInfo } from "@components";
 
 import Link from "next/link";
 
@@ -96,16 +96,6 @@ function WelcomeCertitude() {
         </button>
       </div>
     </section>
-  );
-}
-export function MoreInfo() {
-  return (
-    <div className="bg-for-more-info-bg font-semibold py-14 font-poppins">
-      <p className="text-3xl text-white text-center">
-        For more information please contact{" "}
-        <span className="underline decoration-2">+447533906575</span>
-      </p>
-    </div>
   );
 }
 

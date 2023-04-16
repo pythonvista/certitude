@@ -1,10 +1,7 @@
-import { Footer, Header, SubHeader } from "@components";
-import { MoreInfo } from "@pages";
-import Image from "next/image";
 import React from "react";
 import { MdEmail } from "react-icons/md";
-import { BsFillTelephoneFill, BsTelephoneFill } from "react-icons/bs";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import { Footer, Header, SubHeader, MoreInfo } from "@components";
 
 export default function ContactUs() {
   return (

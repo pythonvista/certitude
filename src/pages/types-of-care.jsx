@@ -1,8 +1,6 @@
-import { Footer, Header, SubHeader } from "@components";
-
-import { MoreInfo } from "@pages";
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+import { Footer, Header, SubHeader, MoreInfo } from "@components";
 
 export default function TypesOfCare() {
   return (

@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Footer, Header, SubHeader } from "@components";
-import { MoreInfo } from "@pages";
+import { Footer, Header, SubHeader, MoreInfo } from "@components";
 
 export default function LiveInCare() {
   return (
