@@ -61,7 +61,7 @@ export default function Footer() {
                 <p>View Map</p>
               </div>
             </div>
-            <div className=" flex flex-col gap-3 mt-4">
+            <div className=" flex flex-col gap-3 mt-4 w-full md:w-fit">
               <Input type={"text"} placeholder={"Full Name*"} />
               <Input type="email" placeholder="Email*" />
               <Input type="text" placeholder="Phone Number" />
@@ -81,7 +81,10 @@ export default function Footer() {
                 </label>
               </div>
             </div>
-            <textarea placeholder="Message*" className="p-4 mt-4 h-[200px]" />
+            <textarea
+              placeholder="Message*"
+              className="p-4 mt-4 h-[200px] w-full md:w-fit"
+            />
           </div>
           <div className="flex item-center gap-5">
             <FaFacebookF />
