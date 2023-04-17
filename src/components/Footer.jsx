@@ -81,12 +81,7 @@ export default function Footer() {
                 </label>
               </div>
             </div>
-            <textarea
-              placeholder="Message*"
-              cols="30"
-              rows="10"
-              className="p-4 mt-4"
-            />
+            <textarea placeholder="Message*" className="p-4 mt-4 h-[200px]" />
           </div>
           <div className="flex item-center gap-5">
             <FaFacebookF />

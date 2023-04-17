@@ -3,7 +3,7 @@ import React from "react";
 function SubHeader({ title, img }) {
   return (
     <section>
-      <h3 className="text-center font-lemon text-4xl text-eerie-80 my-6">
+      <h3 className="text-center font-lemon text-4xl text-eerie-80 my-6 px-10">
         Certitude <span className="text-basil">Care Services</span>
       </h3>
       <div
