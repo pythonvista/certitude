@@ -15,7 +15,7 @@ export default function Footer() {
   }
   const captchaRef = React.useRef(null);
   return (
-    <footer className="bg-basil">
+    <footer className="bg-aegean">
       <div className="w-[89%] max-w-[1700px] mx-auto font-poppins py-10">
         <div className="bg-white p-6">
           <Image
@@ -37,7 +37,7 @@ export default function Footer() {
             </button>
           </div>
         </div>
-        <div className="space-y-8">
+        <div className="space-y-8 text-white">
           <h4 className="text-center font-medium text-3xl my-5">
             Contact Us Today
           </h4>
@@ -66,7 +66,7 @@ export default function Footer() {
               <Input type="email" placeholder="Email*" />
               <Input type="text" placeholder="Phone Number" />
               <ReCAPTCHA
-                sitekey="6Ldk74clAAAAAADLRsZAZ3o_fDxLRKxTfIRm628b"
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA}
                 ref={captchaRef}
               />
               <div className="flex items-center gap-3">

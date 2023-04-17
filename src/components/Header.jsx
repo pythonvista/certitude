@@ -9,7 +9,7 @@ export default function Header() {
   const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-white transition ease transform duration-300`;
 
   return (
-    <header className="bg-emerald relative">
+    <header className="bg-aegean relative">
       <div className="font-poppins text-white font-semibold flex justify-between w-[89%] mx-auto py-7  max-w-[1700px]">
         <DesktopRelativeLinks />
         <MobileRelativeLinks isOpen={isOpen} />
@@ -83,7 +83,7 @@ function DesktopRelativeLinks() {
               <BiChevronDown />
             </p>
             <ul
-              className={`absolute group-hover/item:scale-y-100 scale-y-0 top-full bg-basil origin-top transition-all font-segoe -left-[30%] w-[220px] z-50`}
+              className={`absolute group-hover/item:scale-y-100 scale-y-0 top-full bg-maverick origin-top transition-all font-segoe -left-[30%] w-[220px] z-50`}
             >
               {[
                 {
@@ -109,7 +109,7 @@ function DesktopRelativeLinks() {
               ].map((item) => (
                 <li
                   key={item.name}
-                  className="hover:bg-maverick px-5 py-3 transition-all"
+                  className="hover:bg-eerie px-5 py-3 transition-all"
                 >
                   <Link href={item.url}>{item.name}</Link>
                 </li>
@@ -131,7 +131,7 @@ function MobileRelativeLinks({ isOpen }) {
     <div
       className={`${
         isOpen ? "scale-y-100" : "scale-y-0"
-      } absolute top-full origin-top m:hidden inset-x-0 bg-emerald transition-all`}
+      } absolute top-full origin-top m:hidden inset-x-0 bg-maverick transition-all`}
     >
       <ul className="w-[89%] mx-auto max-w-[1700px] py-2 space-y-5">
         {[
@@ -169,7 +169,7 @@ function MobileRelativeLinks({ isOpen }) {
               <ul
                 className={`${
                   types ? "scale-y-100 h-full" : "scale-y-0 h-0"
-                } top-full bg-basil origin-top transition-all font-segoe -left-[30%] w-[220px] z-50`}
+                } top-full bg-maverick origin-top transition-all font-segoe -left-[30%] w-[220px] z-50`}
               >
                 {[
                   {
@@ -195,7 +195,7 @@ function MobileRelativeLinks({ isOpen }) {
                 ].map((item) => (
                   <li
                     key={item.name}
-                    className="hover:bg-maverick px-5 py-3 transition-all"
+                    className="hover:bg-eerie px-5 py-3 transition-all"
                   >
                     <Link href={item.url}>{item.name}</Link>
                   </li>
