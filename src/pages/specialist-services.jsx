@@ -5,10 +5,10 @@ import { Footer, Header, SubHeader, MoreInfo, CustomHead } from "@components";
 export default function SpecialistServices() {
   return (
     <div>
-      {/* <CustomHead
+      <CustomHead
         descriptionContent={`Our care givers deliver palliative care of an exceptionally high standards sensitively allowing our clients to have the dignity they deserve to help them to continue living independently.`}
         pageName={"Specialist Services"}
-      /> */}
+      />
       <Header />
       <main className="w-[89%] max-w-[1700px] mx-auto mb-10">
         <SubHeader title={"Specialist Services"} img={"bg-types-of-care"} />
