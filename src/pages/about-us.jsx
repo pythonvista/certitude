@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Footer, Header, SubHeader, MoreInfo } from "@components";
+import ctl from "@netlify/classnames-template-literals";
 
 export default function AboutUs() {
   return (
@@ -60,12 +61,12 @@ export default function AboutUs() {
 
 function MainInfo() {
   return (
-    <section className="bg-dandelion font-poppins text-eerie-80 space-y-20 px-16 py-20">
-      <div className="flex gap-16">
-        <div className="relative min-w-[300px] w-[40%] h-[300px]">
+    <section className="bg-dandelion font-poppins text-eerie-80 space-y-20 px-10 m:px-16 py-20">
+      <div className="flex gap-16 flex-col m:flex-row">
+        <div className="relative min-w-[100px] w-full m:w-[40%] h-[300px]">
           <Image src="/who-we-are.png" alt="who-we-are" fill />
         </div>
-        <div className="flex-1 [&>p]:text-base [&>p]:leading-8 space-y-4 [&>p]:font-light [&>h4]:text-2xl [&>h4]:font-medium ">
+        <div className={sectionStyles}>
           <h4>Who we are</h4>
           <p>
             Certitude Care is an established community based care and support
@@ -81,8 +82,8 @@ function MainInfo() {
           </p>
         </div>
       </div>
-      <div className="flex gap-16">
-        <div className="flex-1 [&>p]:text-base [&>p]:leading-8 space-y-4 [&>p]:font-light [&>h4]:text-2xl [&>h4]:font-medium ">
+      <div className="flex gap-16 flex-col-reverse m:flex-row">
+        <div className={sectionStyles}>
           <h4>What do we do?</h4>
           <p>
             We provide great quality domiciliary care for people within the
@@ -99,11 +100,13 @@ function MainInfo() {
             should you require any information about the services that we offer.
           </p>
         </div>
-        <div className="relative min-w-[300px] w-[50%] h-[330px]">
+        <div className="relative min-w-[100px] w-full m:w-[50%] h-[300px]">
           <Image src="/what-do-we-do.png" alt="what-do-we-do" fill />
         </div>
       </div>
-      <div className="w-[50%] [&>p]:text-base [&>p]:leading-8 space-y-4 [&>p]:font-light [&>h4]:text-2xl [&>h4]:font-medium ">
+      <div
+        className={`${sectionStyles} m:w-[50%] [&>p]:text-base [&>p]:leading-8 space-y-4 [&>p]:font-light [&>h4]:text-2xl [&>h4]:font-medium `}
+      >
         <h4>Specialisms/Services</h4>
         <p>
           Dementia, Learning disabilities, Mental health conditions, Personal
@@ -114,3 +117,15 @@ function MainInfo() {
     </section>
   );
 }
+
+const sectionStyles = ctl(`
+  flex-1 
+  [&>p]:text-sm 
+  m:[&>p]:text-base 
+  [&>p]:leading-8 
+  space-y-4 
+  [&>p]:font-light 
+  [&>h4]:text-xl 
+  m:[&>h4]:text-2xl 
+  [&>h4]:font-medium
+`);

@@ -18,7 +18,7 @@ export default function FundingYourCare() {
 function MainInfo() {
   return (
     <section className="bg-dandelion font-poppins text-eerie-80 space-y-20 px-10 py-10 mb-10">
-      <div className="flex-1 [&>p]:text-base italic [&>p]:leading-8 space-y-4 [&>p]:font-light [&>h4]:text-lg [&>h4]:font-semibold [&>h3]:font-bold [&>h3]:text-xl ">
+      <div className="flex-1 [&>p]:text-sm m:[&>p]:text-base italic [&>p]:leading-8 space-y-4 [&>p]:font-light [&>h4]:text-base m:[&>h4]:text-lg [&>h4]:font-semibold [&>h3]:font-bold [&>h3]:text-lg m:[&>h3]:text-xl ">
         <h3>FUNDING YOUR CARE</h3>
         <p>
           Understanding care funding options for you or a loved one can be a
@@ -37,7 +37,7 @@ function MainInfo() {
             "Disability Living Allowance I.P’s",
             "Care Allowance",
           ].map((item) => (
-            <li key={item} className="font-light">
+            <li key={item} className="font-light text-sm m:text-base">
               {item}
             </li>
           ))}
