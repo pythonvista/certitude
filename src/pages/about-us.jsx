@@ -2,6 +2,10 @@ import React from "react";
 import Image from "next/image";
 import { Footer, Header, SubHeader, MoreInfo, CustomHead } from "@components";
 import ctl from "@netlify/classnames-template-literals";
+import {
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
 
 export default function AboutUs() {
   return (
@@ -64,12 +68,23 @@ export default function AboutUs() {
 }
 
 function MainInfo() {
+  const WhoWeAreImages = [
+    "/who-we-are.png",
+    "https://images.unsplash.com/photo-1576765608866-5b51046452be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI5fHxDYXJlJTIwU2VydmljZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "https://images.pexels.com/photos/7551667/pexels-photo-7551667.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/7551622/pexels-photo-7551622.jpeg?auto=compress&cs=tinysrgb&w=600",
+  ];
+  const WhatDoWeDoImages = [
+    "/what-do-we-do.png",
+    "https://images.unsplash.com/photo-1576765608866-5b51046452be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI5fHxDYXJlJTIwU2VydmljZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "https://images.pexels.com/photos/7551667/pexels-photo-7551667.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/7551622/pexels-photo-7551622.jpeg?auto=compress&cs=tinysrgb&w=600",
+  ];
   return (
     <section className="bg-dandelion font-poppins text-eerie-80 space-y-20 px-10 mb-6 m:px-16 py-20">
       <div className="flex gap-16 flex-col m:flex-row">
-        <div className="relative min-w-[100px] w-full m:w-[40%] h-[300px]">
-          <Image src="/who-we-are.png" alt="who-we-are" fill />
-        </div>
+        <Carousel images={WhoWeAreImages} />
+
         <div className={sectionStyles}>
           <h4>Who we are</h4>
           <p>
@@ -104,9 +119,10 @@ function MainInfo() {
             should you require any information about the services that we offer.
           </p>
         </div>
-        <div className="relative min-w-[100px] w-full m:w-[50%] h-[300px]">
+        {/* <div className="relative min-w-[100px] w-full m:w-[50%] h-[300px]">
           <Image src="/what-do-we-do.png" alt="what-do-we-do" fill />
-        </div>
+        </div> */}
+        <Carousel images={WhatDoWeDoImages} />
       </div>
       <div
         className={`${sectionStyles} m:w-[50%] [&>p]:text-base [&>p]:leading-8 space-y-4 [&>p]:font-light [&>h4]:text-2xl [&>h4]:font-medium `}
@@ -121,7 +137,63 @@ function MainInfo() {
     </section>
   );
 }
+function Carousel(props) {
+  const [currentImage, setCurrentImage] = React.useState(0);
 
+  const handlePrevClick = () => {
+    setCurrentImage(
+      (currentImage - 1 + props.images.length) % props.images.length
+    );
+  };
+
+  const handleNextClick = () => {
+    setCurrentImage((currentImage + 1) % props.images.length);
+  };
+  const ProductImg = {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+  };
+  return (
+    <div className="relative h-[300px] min-w-[100px] w-full m:w-[40%]">
+      <div className="h-full relative">
+        <Image
+          src={props.images[currentImage]}
+          alt={`Image ${currentImage}`}
+          style={ProductImg}
+          fill
+        />
+      </div>
+
+      <button
+        onClick={handlePrevClick}
+        style={{
+          position: "absolute",
+          left: "0%",
+          bottom: "0%",
+          paddingInline: "26px",
+          paddingBlock: "16px",
+        }}
+        className="bg-aegean-60 text-white"
+      >
+        <MdOutlineKeyboardArrowLeft size={30} />
+      </button>
+      <button
+        onClick={handleNextClick}
+        style={{
+          position: "absolute",
+          right: "0%",
+          bottom: "0%",
+          paddingInline: "26px",
+          paddingBlock: "16px",
+        }}
+        className="bg-aegean-60 text-white"
+      >
+        <MdOutlineKeyboardArrowRight size={30} />
+      </button>
+    </div>
+  );
+}
 const sectionStyles = ctl(`
   flex-1 
   [&>p]:text-sm 

@@ -4,12 +4,13 @@ import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
+import Image from "next/image";
 
 export default function Testimonial() {
   const images = [
-    "https://images.unsplash.com/photo-1681502014934-b70a5ff05bef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-    "https://images.unsplash.com/photo-1681647627150-f5cb38f3a626?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-    "https://images.unsplash.com/photo-1681412327205-af22c0849ee5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1576765608866-5b51046452be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI5fHxDYXJlJTIwU2VydmljZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "https://images.pexels.com/photos/7551667/pexels-photo-7551667.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/7551622/pexels-photo-7551622.jpeg?auto=compress&cs=tinysrgb&w=600",
   ];
   return (
     <div>
@@ -155,12 +156,13 @@ function Carousel(props) {
     objectFit: "cover",
   };
   return (
-    <div className="relative mb-10">
-      <div style={{ height: "300px" }}>
-        <img
+    <div className="relative mb-10 w-[300px]">
+      <div className="h-[300px] relative">
+        <Image
           src={props.images[currentImage]}
           alt={`Image ${currentImage}`}
           style={ProductImg}
+          fill
         />
       </div>
 

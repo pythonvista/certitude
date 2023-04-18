@@ -111,14 +111,18 @@ function DesktopRelativeLinks() {
                   key={item.name}
                   className="hover:bg-eerie px-5 py-3 transition-all"
                 >
-                  <Link href={item.url}>{item.name}</Link>
+                  <Link href={item.url} className="w-full block">
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
           </li>
         ) : (
           <li key={item.name}>
-            <Link href={item.url}>{item.name}</Link>
+            <Link href={item.url} className="w-full block">
+              {item.name}
+            </Link>
           </li>
         )
       )}
@@ -214,7 +218,9 @@ function MobileRelativeLinks({ isOpen, setIsOpen }) {
             </li>
           ) : (
             <li key={item.name}>
-              <Link href={item.url}>{item.name}</Link>
+              <Link href={item.url} className="w-full block">
+                {item.name}
+              </Link>
             </li>
           )
         )}

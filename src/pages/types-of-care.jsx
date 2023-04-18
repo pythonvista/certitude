@@ -1,6 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import { Footer, Header, SubHeader, MoreInfo, CustomHead } from "@components";
+import {
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
 
 export default function TypesOfCare() {
   return (
@@ -13,8 +17,8 @@ export default function TypesOfCare() {
       <main className="w-[89%] max-w-[1700px] mx-auto mb-10">
         <SubHeader title={"Types of Care"} img={"bg-types-of-care"} />
         <MainInfo />
-        <section className="flex my-7 items-center">
-          <div className="bg-bright-gray font-poppins italic [&>h4]:text-lg [&>h4]:font-bold p-10 w-[70%]">
+        <section className="flex flex-col-reverse m:flex-row my-7 items-center">
+          <div className="bg-bright-gray font-poppins italic [&>h4]:text-lg [&>h4]:font-bold p-10 m:w-[70%]">
             <h4>Continuing Health Care</h4>
             <div className="space-y-5">
               <p>
@@ -42,7 +46,7 @@ export default function TypesOfCare() {
               </p>
             </div>
           </div>
-          <div className="relative min-w-[100px] w-[30%] h-[250px]">
+          <div className="relative min-w-[100px] w-full m:w-[30%] h-[250px]">
             <Image src="/who-we-are.png" alt="who-we-are" fill />
           </div>
         </section>
@@ -53,13 +57,38 @@ export default function TypesOfCare() {
   );
 }
 function MainInfo() {
+  const WhoWeAreImages = [
+    "/who-we-are.png",
+    "https://images.unsplash.com/photo-1576765608866-5b51046452be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI5fHxDYXJlJTIwU2VydmljZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "https://images.pexels.com/photos/7551667/pexels-photo-7551667.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/7551622/pexels-photo-7551622.jpeg?auto=compress&cs=tinysrgb&w=600",
+  ];
+  const WhatDoWeDoImages = [
+    "/what-do-we-do.png",
+    "https://images.unsplash.com/photo-1576765608866-5b51046452be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI5fHxDYXJlJTIwU2VydmljZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "https://images.pexels.com/photos/7551667/pexels-photo-7551667.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/7551622/pexels-photo-7551622.jpeg?auto=compress&cs=tinysrgb&w=600",
+  ];
+  const CommunityAssistantImages = [
+    "https://images.pexels.com/photos/7551622/pexels-photo-7551622.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.unsplash.com/photo-1576765608866-5b51046452be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI5fHxDYXJlJTIwU2VydmljZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "/what-do-we-do.png",
+    "https://images.pexels.com/photos/7551667/pexels-photo-7551667.jpeg?auto=compress&cs=tinysrgb&w=600",
+  ];
+  const LiveInCareImages = [
+    "/what-do-we-do.png",
+    "https://images.pexels.com/photos/7551667/pexels-photo-7551667.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.unsplash.com/photo-1576765608866-5b51046452be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI5fHxDYXJlJTIwU2VydmljZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "https://images.pexels.com/photos/7551622/pexels-photo-7551622.jpeg?auto=compress&cs=tinysrgb&w=600",
+  ];
+  const sectionStyle =
+    "flex-1 [&>p]:text-sm m:[&>p]:text-base [&>p]:leading-8 space-y-4 [&>p]:font-light [&>h4]:text-lg m:[&>h4]:text-xl [&>h4]:font-medium [&>h3]:font-semibold [&>h3]:text-2xl m:[&>h3]:text-3xl";
   return (
     <section className="bg-dandelion font-poppins text-eerie-80 space-y-20 px-16 py-20">
-      <div className="flex gap-16">
-        <div className="relative min-w-[300px] w-[40%] h-[300px]">
-          <Image src="/who-we-are.png" alt="who-we-are" fill />
-        </div>
-        <div className="flex-1 [&>p]:text-base [&>p]:leading-8 space-y-4 [&>p]:font-light [&>h4]:text-xl [&>h4]:font-medium [&>h3]:font-semibold [&>h3]:text-3xl ">
+      <div className="flex gap-16 flex-col m:flex-row">
+        <Carousel images={WhoWeAreImages} />
+
+        <div className={sectionStyle}>
           <h3>Specialist Services</h3>
           <h4>End of life care</h4>
           <p>
@@ -98,8 +127,8 @@ function MainInfo() {
         </div>
       </div>
 
-      <div className="flex gap-16">
-        <div className="flex-1 [&>p]:text-base [&>p]:leading-8 space-y-4 [&>p]:font-light [&>h4]:text-2xl [&>h4]:font-medium ">
+      <div className="flex gap-16 flex-col-reverse m:flex-row">
+        <div className={sectionStyle}>
           <h4>Home Care</h4>
           <p>
             Domiciliary care is provided for people who still have their own
@@ -114,15 +143,13 @@ function MainInfo() {
             needs.
           </p>
         </div>
-        <div className="relative min-w-[300px] w-[50%] h-[330px]">
-          <Image src="/what-do-we-do.png" alt="what-do-we-do" fill />
-        </div>
+
+        <Carousel images={WhatDoWeDoImages} />
       </div>
-      <div className="flex gap-16">
-        <div className="relative min-w-[300px] w-[50%] h-[330px]">
-          <Image src="/what-do-we-do.png" alt="what-do-we-do" fill />
-        </div>
-        <div className="flex-1 [&>p]:text-base [&>p]:leading-8 space-y-4 [&>p]:font-light [&>h4]:text-2xl [&>h4]:font-medium ">
+      <div className="flex gap-16 flex-col m:flex-row">
+        <Carousel images={CommunityAssistantImages} />
+
+        <div className={sectionStyle}>
           <h4>Community Assistant</h4>
           <p>
             We offer a unique choice of flexible home care and support. Our
@@ -132,8 +159,8 @@ function MainInfo() {
           </p>
         </div>
       </div>
-      <div className="flex gap-16">
-        <div className="flex-1 [&>p]:text-base [&>p]:leading-8 space-y-4 [&>p]:font-light [&>h4]:text-2xl [&>h4]:font-medium ">
+      <div className="flex gap-16 flex-col-reverse m:flex-row">
+        <div className={sectionStyle}>
           <h4>Live in care</h4>
           <p>
             Live-in care helps you live the life you want, on your own terms, in
@@ -153,10 +180,65 @@ function MainInfo() {
             page.
           </p>
         </div>
-        <div className="relative min-w-[300px] w-[50%] h-[330px]">
-          <Image src="/what-do-we-do.png" alt="what-do-we-do" fill />
-        </div>
+        <Carousel images={LiveInCareImages} />
       </div>
     </section>
+  );
+}
+function Carousel(props) {
+  const [currentImage, setCurrentImage] = React.useState(0);
+
+  const handlePrevClick = () => {
+    setCurrentImage(
+      (currentImage - 1 + props.images.length) % props.images.length
+    );
+  };
+
+  const handleNextClick = () => {
+    setCurrentImage((currentImage + 1) % props.images.length);
+  };
+  const ProductImg = {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+  };
+  return (
+    <div className="relative h-[300px] min-w-[100px] w-full m:w-[40%]">
+      <div className="h-full relative">
+        <Image
+          src={props.images[currentImage]}
+          alt={`Image ${currentImage}`}
+          style={ProductImg}
+          fill
+        />
+      </div>
+
+      <button
+        onClick={handlePrevClick}
+        style={{
+          position: "absolute",
+          left: "0%",
+          bottom: "0%",
+          paddingInline: "26px",
+          paddingBlock: "16px",
+        }}
+        className="bg-aegean-60 text-white"
+      >
+        <MdOutlineKeyboardArrowLeft size={30} />
+      </button>
+      <button
+        onClick={handleNextClick}
+        style={{
+          position: "absolute",
+          right: "0%",
+          bottom: "0%",
+          paddingInline: "26px",
+          paddingBlock: "16px",
+        }}
+        className="bg-aegean-60 text-white"
+      >
+        <MdOutlineKeyboardArrowRight size={30} />
+      </button>
+    </div>
   );
 }
