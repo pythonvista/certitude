@@ -12,7 +12,7 @@ export default function Header() {
     <header className="bg-aegean relative">
       <div className="font-poppins text-white font-semibold flex justify-between w-[89%] mx-auto py-7  max-w-[1700px]">
         <DesktopRelativeLinks />
-        <MobileRelativeLinks isOpen={isOpen} />
+        <MobileRelativeLinks isOpen={isOpen} setIsOpen={setIsOpen} />
         <div className="flex items-center gap-2">
           <div className="flex items-center gap-2">
             <BsFillTelephoneFill className="mt-1" />
@@ -125,13 +125,13 @@ function DesktopRelativeLinks() {
     </ul>
   );
 }
-function MobileRelativeLinks({ isOpen }) {
+function MobileRelativeLinks({ isOpen, setIsOpen }) {
   const [types, setTypes] = React.useState(false);
   return (
     <div
       className={`${
         isOpen ? "scale-y-100" : "scale-y-0"
-      } absolute top-full origin-top m:hidden inset-x-0 bg-maverick transition-all`}
+      } absolute top-full origin-top m:hidden inset-x-0 bg-maverick transition-all z-50`}
     >
       <ul className="w-[89%] mx-auto max-w-[1700px] py-2 space-y-5">
         {[
@@ -160,7 +160,9 @@ function MobileRelativeLinks({ isOpen }) {
             <li
               key={item.name}
               className="group/item relative"
-              onClick={() => setTypes((prev) => !prev)}
+              onClick={() => {
+                setTypes((prev) => !prev);
+              }}
             >
               <p className="flex items-center cursor-pointer ">
                 {item.name}
@@ -197,7 +199,15 @@ function MobileRelativeLinks({ isOpen }) {
                     key={item.name}
                     className="hover:bg-eerie px-5 py-3 transition-all"
                   >
-                    <Link href={item.url}>{item.name}</Link>
+                    <Link
+                      href={item.url}
+                      onClick={() => {
+                        setIsOpen((prev) => !prev);
+                      }}
+                      className="w-full block"
+                    >
+                      {item.name}
+                    </Link>
                   </li>
                 ))}
               </ul>

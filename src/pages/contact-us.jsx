@@ -9,12 +9,14 @@ export default function ContactUs() {
       <Header />
       <main className="w-[89%] max-w-[1700px] mx-auto mb-10 space-y-10">
         <SubHeader title={"Contact US"} img={"bg-types-of-care"} />
-        <section className="bg-contact-bg p-16">
-          <div className="max-w-[600px] ml-auto bg-aegean p-10 font-poppins text-white">
-            <h4 className="text-4xl font-bold">Contact US</h4>
+        <section className="bg-contact-bg py-16 px-4 flex justify-center m:justify-end">
+          <div className="max-w-[600px] w-[90%] bg-aegean p-10 font-poppins text-white">
+            <h4 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+              Contact US
+            </h4>
             <div className="flex gap-3 mt-2">
               <FaMapMarkerAlt className="mt-2" />{" "}
-              <p className="font-light leading-7">
+              <p className="font-light leading-7 text-sm m:text-base">
                 <span className="font-semibold">Certitude Care Service</span>{" "}
                 <br />
                 90 Lightwood Road <br />
@@ -24,13 +26,13 @@ export default function ContactUs() {
             </div>
             <div className="flex items-center gap-3 font-light mt-6">
               <FaPhoneAlt />
-              <p>
+              <p className="text-sm m:text-base">
                 T. <a href="tel:+447533906575">+447533906575</a>
               </p>
             </div>
             <div className="flex items-center gap-3 font-light">
               <MdEmail />
-              <p>
+              <p className="text-sm m:text-base">
                 E:{" "}
                 <a href="mailto:tonabay@gmail.com.uk">tonabay@gmail.com.uk</a>
               </p>
