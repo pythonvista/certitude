@@ -19,12 +19,12 @@ export default function CommunityAssistant() {
 
 function MainInfo() {
   return (
-    <section className="bg-dandelion font-poppins text-eerie-80 space-y-20 px-16 py-20 mb-10">
-      <div className="flex gap-16">
-        <div className="relative min-w-[300px] w-[40%] h-[300px]">
+    <section className="bg-dandelion font-poppins text-eerie-80 space-y-20 px-10 py-10 m:px-16 m:py-20 mb-10">
+      <div className="flex gap-16 flex-col m:flex-row">
+        <div className="relative z-10 min-w-[100px] w-full m:w-[40%] h-[300px]">
           <Image src="/who-we-are.png" alt="who-we-are" fill />
         </div>
-        <div className="flex-1 [&>p]:text-base [&>p]:leading-8 space-y-4 [&>p]:font-light [&>h4]:text-xl [&>h4]:font-medium [&>h3]:font-semibold [&>h3]:text-3xl ">
+        <div className="flex-1 [&>p]:text-sm m:[&>p]:text-base [&>p]:leading-8 space-y-4 [&>p]:font-light [&>h4]:text-lg m:[&>h4]:text-xl [&>h4]:font-medium [&>h3]:font-semibold [&>h3]:text-2xl m:[&>h3]:text-3xl ">
           <h3>Community Assistant</h3>
           <p>
             We offer a unique choice of flexible home care and support. Our
@@ -48,14 +48,16 @@ function MainInfo() {
           <h4>What can we provide?</h4>
           <div>
             <p>We can assist you with:</p>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc pl-3">
               {[
                 "light housework",
                 "shopping",
                 "accompany you on social visits",
                 "support you to plan your social life/ schedule",
               ].map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item} className="text-sm m:text-base">
+                  {item}
+                </li>
               ))}
             </ul>
           </div>

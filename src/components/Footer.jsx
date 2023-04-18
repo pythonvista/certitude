@@ -125,7 +125,10 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            <p>Web Design Company</p>
+            <a href="https://linktr.ee/eniolayo" target="_blank">
+              Built by Ayodeji Ikujuni
+            </a>
+            {/* <p>Web Design Company</p> */}
           </div>
         </div>
       </div>

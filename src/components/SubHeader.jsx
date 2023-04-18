@@ -7,7 +7,7 @@ function SubHeader({ title, img }) {
         Certitude <span className="text-basil">Care Services</span>
       </h3>
       <div
-        className={`${img} h-[180px] grid place-items-center bg-cover font-poppins font-bold text-2xl md:text-3xl lg:text-4xl text-white w-full bg-no-repeat text-center`}
+        className={`${img} h-[180px] grid place-items-center bg-cover font-poppins font-bold text-2xl md:text-3xl lg:text-4xl text-white w-full bg-no-repeat text-center px-7`}
       >
         <h4>{title}</h4>
       </div>

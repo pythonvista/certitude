@@ -20,7 +20,7 @@ export default function Testimonial() {
 
 function MainInfo() {
   return (
-    <section className="[&>*]:text-center [&>h3]:font-semibold [&>h3]:text-3xl [&_h5]:text-base [&_h5]:font-semibold [&_p]:font-light [&_p]:leading-10 font-poppins max-w-[1124px] mx-auto my-6 py-10">
+    <section className="[&>*]:text-center [&>h3]:font-semibold [&>h3]:text-2xl m:[&>h3]:text-3xl [&_p]:text-sm m:[&_p]:text-base [&_h5]:text-sm m:[&_h5]:text-base [&_h5]:font-semibold [&_p]:font-light [&_p]:leading-10 font-poppins max-w-[1124px] mx-auto my-6 py-10">
       <h3>TESTIMONIALS</h3>
       <p>
         This is what our clients have to say about the services that we
