@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import localFont from "@next/font/local";
+import localFont from "next/font/local";
 import { Poppins, Lemon } from "next/font/google";
 const poppins = Poppins({
   subsets: ["latin"],

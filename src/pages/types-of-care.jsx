@@ -1,10 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import { Footer, Header, SubHeader, MoreInfo } from "@components";
+import { Footer, Header, SubHeader, MoreInfo, CustomHead } from "@components";
 
 export default function TypesOfCare() {
   return (
     <div>
+      {/* <CustomHead
+        descriptionContent={`Some people with long-term complex health needs qualify for free social care arranged and funded solely by the NHS. This is known as NHS continuing healthcare. People with terminal illnesses may also qualify.`}
+        pageName={"Types Of Care"}
+      /> */}
       <Header />
       <main className="w-[89%] max-w-[1700px] mx-auto mb-10">
         <SubHeader title={"Types of Care"} img={"bg-types-of-care"} />

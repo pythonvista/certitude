@@ -1,10 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import { Footer, Header, SubHeader, MoreInfo } from "@components";
+import { Footer, Header, SubHeader, MoreInfo, CustomHead } from "@components";
 
 export default function HomeCare() {
   return (
     <div>
+      {/* <CustomHead
+        descriptionContent={`Home care gives individuals the much deserved extra support, reassurance and companionship that may be needed for you to continue living at home as independently as is possible.`}
+        pageName={"Home Care"}
+      /> */}
       <Header />
       <main className="w-[89%] mx-auto max-w-[1700px] mb-10">
         <SubHeader title={"Home Care"} img={"bg-types-of-care"} />

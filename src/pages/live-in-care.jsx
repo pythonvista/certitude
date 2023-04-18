@@ -1,10 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import { Footer, Header, SubHeader, MoreInfo } from "@components";
+import { Footer, Header, SubHeader, MoreInfo, CustomHead } from "@components";
 
 export default function LiveInCare() {
   return (
     <div>
+      {/* <CustomHead
+        descriptionContent={`Live-in care helps you live the life you want, on your own terms, in your own home, close to family and friends. We ensure that with our person-centred approach, we will put together a unique package of care with a carefully chosen carer. Together, we’ll help you stay in
+        the home you know and love.`}
+        pageName={"Live In Care"}
+      /> */}
       <Header />
       <main className="w-[89%] max-w-[1700px] mx-auto mb-10">
         <SubHeader title={"Live in Care"} img={"bg-types-of-care"} />
