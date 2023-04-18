@@ -10,7 +10,7 @@ export default function HomeCare() {
         <SubHeader title={"Home Care"} img={"bg-types-of-care"} />
         <MainInfo />
         <section className="relative my-10">
-          <div className="h-[356px] absolute inset-0 w-full">
+          <div className="h-[356px] relative m:absolute m:inset-0 w-full">
             <Image
               src="/contact-bg.jpg"
               alt="contact-bg"
@@ -20,7 +20,7 @@ export default function HomeCare() {
               }}
             />
           </div>
-          <div className="bg-aegean relative max-w-[500px] p-10 text-white font-poppins space-y-7 font-light [&_*]:leading-7 top-10 -left-7 ml-auto mb-20">
+          <div className="bg-aegean relative w-full mx-auto m:max-w-[500px] p-5 [&>p]:text-sm m:[&>p]:text-base  m:p-10 text-white font-poppins space-y-7 font-light [&_*]:leading-7 top-10 m:-left-7 ml-auto mb-20">
             <p>
               Home care gives individuals the much deserved extra support,
               reassurance and companionship that may be needed for you to
@@ -36,7 +36,9 @@ export default function HomeCare() {
                 "support with medication administration",
                 "Meal preparations and feeding",
               ].map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item} className="text-sm m:text-base ">
+                  {item}
+                </li>
               ))}
             </ul>
             <p>
@@ -52,7 +54,7 @@ export default function HomeCare() {
               struggle with.
             </p>
             <div>
-              <h4 className="font-bold text-xl">
+              <h4 className="font-bold text-lg m:text-xl">
                 Types of homecare we provide:{" "}
               </h4>
               <ul className="list-disc list-inside">
@@ -67,7 +69,9 @@ export default function HomeCare() {
                   "palliative care",
                   "elderly care",
                 ].map((item) => (
-                  <li key={item}>{item}</li>
+                  <li key={item} className="text-sm m:text-base ">
+                    {item}
+                  </li>
                 ))}
               </ul>
             </div>
@@ -81,12 +85,12 @@ export default function HomeCare() {
 }
 function MainInfo() {
   return (
-    <section className="bg-dandelion font-poppins text-eerie-80 space-y-20 px-16 py-20">
-      <div className="flex gap-16">
-        <div className="relative min-w-[300px] w-[50%] h-[330px]">
+    <section className="bg-dandelion font-poppins text-eerie-80 space-y-20 px-10 py-10 m:px-16 m:py-20">
+      <div className="flex gap-16 flex-col m:flex-row">
+        <div className="relative z-10 min-w-[100px] w-full m:w-[50%] h-[300px]">
           <Image src="/what-do-we-do.png" alt="what-do-we-do" fill />
         </div>
-        <div className="flex-1 [&>p]:text-base [&>p]:leading-8 space-y-4 [&>p]:font-light [&>h4]:text-2xl [&>h4]:font-medium ">
+        <div className="flex-1 [&>p]:text-sm m:[&>p]:text-base [&>p]:leading-8 space-y-4 [&>p]:font-light [&>h4]:text-xl m:[&>h4]:text-2xl [&>h4]:font-medium ">
           <h4>Home Care</h4>
           <p>
             Domiciliary care is provided for people who still have their own
