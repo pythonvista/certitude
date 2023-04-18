@@ -1,11 +1,17 @@
 import React from "react";
 import Image from "next/image";
 
-import { Footer, Header, SubHeader, MoreInfo } from "@components";
+import { Footer, Header, SubHeader, MoreInfo, CustomHead } from "@components";
 
 export default function CommunityAssistant() {
   return (
     <div>
+      <CustomHead
+        descriptionContent={
+          "We offer a unique choice of flexible home care and support. Our carers are trained in a whole range of areas and can assist with light housework, shopping and social visits, religious visits,giving our clients the confidence to continue living in their own homes as well as keep up with their social routines."
+        }
+        pageName={"Community Assistant"}
+      />
       <Header />
       <main className="w-[89%] max-w-[1700px] mx-auto mb-10">
         <SubHeader title={"Community Assistant"} img={"bg-types-of-care"} />

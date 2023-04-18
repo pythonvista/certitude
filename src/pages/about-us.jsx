@@ -1,11 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import { Footer, Header, SubHeader, MoreInfo } from "@components";
+import { Footer, Header, SubHeader, MoreInfo, CustomHead } from "@components";
 import ctl from "@netlify/classnames-template-literals";
 
 export default function AboutUs() {
   return (
     <div>
+      <CustomHead
+        descriptionContent={"About Certitude Care Services"}
+        pageName={"About Us"}
+      />
       <Header />
       <main className="w-[89%] max-w-[1700px] mx-auto mb-10">
         <SubHeader

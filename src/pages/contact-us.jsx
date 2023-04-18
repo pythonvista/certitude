@@ -1,11 +1,15 @@
 import React from "react";
 import { MdEmail } from "react-icons/md";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
-import { Footer, Header, SubHeader, MoreInfo } from "@components";
+import { Footer, Header, SubHeader, MoreInfo, CustomHead } from "@components";
 
 export default function ContactUs() {
   return (
     <div>
+      <CustomHead
+        descriptionContent={"Certitude Care Service"}
+        pageName={"Contact Us"}
+      />
       <Header />
       <main className="w-[89%] max-w-[1700px] mx-auto mb-10 space-y-10">
         <SubHeader title={"Contact US"} img={"bg-types-of-care"} />

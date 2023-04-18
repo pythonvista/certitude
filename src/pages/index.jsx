@@ -1,12 +1,18 @@
 import React from "react";
 import Image from "next/image";
-import { Footer, Header, MoreInfo } from "@components";
+import { CustomHead, Footer, Header, MoreInfo } from "@components";
 
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div>
+      <CustomHead
+        descriptionContent={
+          "Trusted Providers of Support and home care for your loved ones"
+        }
+        pageName={"Home"}
+      />
       <Header />
       <main>
         <h3 className="text-center font-lemon text-2xl md:text-3xl lg:text-4xl text-eerie-80 my-6">

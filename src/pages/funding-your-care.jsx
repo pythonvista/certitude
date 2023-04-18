@@ -1,9 +1,13 @@
 import React from "react";
-import { Footer, Header, SubHeader, MoreInfo } from "@components";
+import { Footer, Header, SubHeader, MoreInfo, CustomHead } from "@components";
 
 export default function FundingYourCare() {
   return (
     <div>
+      <CustomHead
+        descriptionContent={`Understanding care funding options for you or a loved one can be a complex and daunting process. The cost of care is dependent on your personal circumstances and, by carrying out a little research and utilising resources available to you, your options become clearer and easier to understand. When considering your best options for funding care the first step is to ensure that all state entitlements are explored.`}
+        pageName={"Funding Your Care"}
+      />
       <Header />
       <main className="w-[89%] max-w-[1700px] mx-auto mb-10">
         <SubHeader title={"Funding Your Care"} img={"bg-types-of-care"} />

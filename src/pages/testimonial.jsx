@@ -13,10 +13,10 @@ export default function Testimonial() {
   ];
   return (
     <div>
-      {/* <CustomHead
+      <CustomHead
         descriptionContent={`This company has recently taken over my father’s care and “wow” these people are truly fantastic! Attention to detail has been great. What a breath of fresh air – professional, efficient, reliable. I could not have asked for better care for my father. Only wished he’d been assigned these people earlier – the previous care team should hang their heads because these people make them look like amateurs. Absolutely recommend – do not hesitate if you have the chance of getting them because their care standards are impressive.`}
         pageName={"Testimonial"}
-      /> */}
+      />
       <Header />
       <main className="w-[89%] max-w-[1700px] mx-auto mb-10">
         <SubHeader
