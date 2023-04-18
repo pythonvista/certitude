@@ -9,7 +9,7 @@ export default function Home() {
     <div>
       <Header />
       <main>
-        <h3 className="text-center font-lemon text-4xl text-eerie-80 my-6">
+        <h3 className="text-center font-lemon text-2xl md:text-3xl lg:text-4xl text-eerie-80 my-6">
           Certitude <span className="text-basil">Care Services</span>
         </h3>
         <HeroDisplay />
@@ -29,13 +29,13 @@ function HeroDisplay() {
       className={`${mainOne[0]} h-[550px] flex justify-center items-center bg-no-repeat bg-cover`}
     >
       <div className="bg-white-90 max-w-[650px] w-[90%] mx-auto font-segoe p-9 space-y-6 text-maverick">
-        <h5 className="text-center font-normal text-2xl">
+        <h5 className="text-center font-normal text-lg md:text-xl lg:text-2xl">
           Trusted Providers of <br />
-          <span className="text-4xl text-center font-bold">
+          <span className="text-2xl md:text-3xl lg:text-4xl text-center font-bold">
             Support and home care <br /> for your loved ones
           </span>
         </h5>
-        <button className="bg-basil px-4 py-2 w-fit mx-auto block">
+        <button className="bg-urobilin font-segoe text-sm lg:text-base px-4 py-2 w-fit mx-auto block">
           More about us
         </button>
       </div>
@@ -47,7 +47,7 @@ function DisplayFeatures() {
     <div className="flex font-poppins justify-center xl:justify-between items-center mx-auto gap-4 flex-wrap">
       {mainFeatures.map((item) => (
         <Link href={item.url} key={item.heading}>
-          <div className="w-[290px] text-center bg-basil">
+          <div className="w-[290px] text-center border-silver-chalice border-2">
             <div className="relative h-[250px]">
               <Image
                 src={item.img}
@@ -59,8 +59,10 @@ function DisplayFeatures() {
               />
             </div>
             <div className="space-y-4 p-6">
-              <h4 className="font-semibold text-xl">{item.heading}</h4>
-              <p>{item["sub-heading"]}</p>
+              <h4 className="font-semibold text-lg lg:text-xl">
+                {item.heading}
+              </h4>
+              <p className="text-sm lg:text-base">{item["sub-heading"]}</p>
             </div>
           </div>
         </Link>
@@ -72,8 +74,8 @@ function DisplayFeatures() {
 function WelcomeCertitude() {
   return (
     <section className="bg-certitude-intro-bg  bg-cover bg-no-repeat flex justify-center items-center font-poppins ">
-      <div className="w-[90%] max-w-[750px] mx-auto text-center text-white text-xl p-10">
-        <h4 className="text-4xl font-bold mb-6">
+      <div className="w-[98%] m:w-[90%] max-w-[750px] mx-auto text-center text-white sm:text-base md:text-lg lg:text-xl p-10">
+        <h4 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
           Welcome to Certitude Care Service
         </h4>
         <p className="mb-1">
@@ -91,7 +93,7 @@ function WelcomeCertitude() {
           24-hour live-in care, depending upon the requirements of the customer
           and their family.
         </p>
-        <button className="bg-aegean text-base font-segoe px-6 py-2 w-fit mx-auto mt-10 block">
+        <button className="bg-aegean text-sm lg:text-base font-segoe px-6 py-2 w-fit mx-auto mt-10 block">
           Find Out More
         </button>
       </div>

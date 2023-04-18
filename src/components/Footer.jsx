@@ -11,7 +11,9 @@ import Link from "next/link";
 
 export default function Footer() {
   function Input({ placeholder, type }) {
-    return <input type={type} placeholder={placeholder} className="p-4" />;
+    return (
+      <input type={type} placeholder={placeholder} className="p-4 text-black" />
+    );
   }
   const captchaRef = React.useRef(null);
   return (
@@ -83,7 +85,7 @@ export default function Footer() {
             </div>
             <textarea
               placeholder="Message*"
-              className="p-4 mt-4 h-[200px] w-full md:w-fit"
+              className="p-4 mt-4 h-[200px] w-full md:w-fit text-black"
             />
           </div>
           <div className="flex item-center gap-5">
