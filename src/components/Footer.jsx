@@ -19,7 +19,7 @@ export default function Footer() {
   return (
     <footer className="bg-aegean">
       <div className="w-[89%] max-w-[1700px] mx-auto font-poppins py-10">
-        <div className="bg-white p-6">
+        {/* <div className="bg-white p-6">
           <Image
             src="/asset_cqclogo_update.png"
             alt="asset_cqclogo_update"
@@ -38,7 +38,7 @@ export default function Footer() {
               See the report <BiChevronRight size={30} />
             </button>
           </div>
-        </div>
+        </div> */}
         <div className="space-y-8 text-white">
           <h4 className="text-center font-medium text-3xl my-5">
             Contact Us Today
@@ -115,10 +115,10 @@ export default function Footer() {
                   name: "Contact Us",
                   url: "/contact-us",
                 },
-                {
-                  name: "Testimonials",
-                  url: "/testimonial",
-                },
+                // {
+                //   name: "Testimonials",
+                //   url: "/testimonial",
+                // },
               ].map((item) => (
                 <li key={item.name}>
                   <Link href={item.url}>{item.name}</Link>
@@ -128,7 +128,6 @@ export default function Footer() {
             <a href="https://linktr.ee/eniolayo" target="_blank">
               Built by Ayodeji Ikujuni
             </a>
-            {/* <p>Web Design Company</p> */}
           </div>
         </div>
       </div>

@@ -13,7 +13,7 @@ export default function AboutUs() {
           img={"bg-about-CCS-bg"}
         />
         <MainInfo />
-        <section className="[&>*]:text-center [&>h4]:font-semibold [&>h4]:text-xl [&>h5]:text-lg [&>h5]:font-medium [&>p]:font-light [&>p]:leading-8 font-poppins max-w-[1124px] mx-auto space-y-4 my-6 py-10">
+        {/* <section className="[&>*]:text-center [&>h4]:font-semibold [&>h4]:text-xl [&>h5]:text-lg [&>h5]:font-medium [&>p]:font-light [&>p]:leading-8 font-poppins max-w-[1124px] mx-auto space-y-4 mb-6 py-10">
           <h4>CQC Inspected</h4>
           <p>
             Certitude Care services was registered by CQC on 23 March 2017. The
@@ -51,7 +51,7 @@ export default function AboutUs() {
             alt="cqc.png"
             className="mx-auto"
           />
-        </section>
+        </section> */}
         <MoreInfo />
       </main>
       <Footer />
@@ -61,7 +61,7 @@ export default function AboutUs() {
 
 function MainInfo() {
   return (
-    <section className="bg-dandelion font-poppins text-eerie-80 space-y-20 px-10 m:px-16 py-20">
+    <section className="bg-dandelion font-poppins text-eerie-80 space-y-20 px-10 mb-6 m:px-16 py-20">
       <div className="flex gap-16 flex-col m:flex-row">
         <div className="relative min-w-[100px] w-full m:w-[40%] h-[300px]">
           <Image src="/who-we-are.png" alt="who-we-are" fill />

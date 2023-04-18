@@ -35,9 +35,12 @@ function HeroDisplay() {
             Support and home care <br /> for your loved ones
           </span>
         </h5>
-        <button className="bg-urobilin font-segoe text-sm lg:text-base px-4 py-2 w-fit mx-auto block">
+        <Link
+          href="/about-us"
+          className="bg-urobilin font-segoe text-sm lg:text-base px-4 py-2 w-fit mx-auto block"
+        >
           More about us
-        </button>
+        </Link>
       </div>
     </div>
   );

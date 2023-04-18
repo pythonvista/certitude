@@ -1,7 +1,16 @@
 import React from "react";
 import { Footer, Header, SubHeader, MoreInfo } from "@components";
+import {
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
 
 export default function Testimonial() {
+  const images = [
+    "https://images.unsplash.com/photo-1681502014934-b70a5ff05bef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1681647627150-f5cb38f3a626?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1681412327205-af22c0849ee5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+  ];
   return (
     <div>
       <Header />
@@ -11,6 +20,7 @@ export default function Testimonial() {
           img={"bg-about-CCS-bg"}
         />
         <MainInfo />
+        <Carousel images={images} />
         <MoreInfo />
       </main>
       <Footer />
@@ -121,5 +131,61 @@ function MainInfo() {
         </div>
       </div>
     </section>
+  );
+}
+function Carousel(props) {
+  const [currentImage, setCurrentImage] = React.useState(0);
+
+  const handlePrevClick = () => {
+    setCurrentImage(
+      (currentImage - 1 + props.images.length) % props.images.length
+    );
+  };
+
+  const handleNextClick = () => {
+    setCurrentImage((currentImage + 1) % props.images.length);
+  };
+  const ProductImg = {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+  };
+  return (
+    <div className="relative mb-10">
+      <div style={{ height: "300px" }}>
+        <img
+          src={props.images[currentImage]}
+          alt={`Image ${currentImage}`}
+          style={ProductImg}
+        />
+      </div>
+
+      <button
+        onClick={handlePrevClick}
+        style={{
+          position: "absolute",
+          left: "0%",
+          bottom: "0%",
+          paddingInline: "26px",
+          paddingBlock: "16px",
+        }}
+        className="bg-aegean-60 text-white"
+      >
+        <MdOutlineKeyboardArrowLeft size={30} />
+      </button>
+      <button
+        onClick={handleNextClick}
+        style={{
+          position: "absolute",
+          right: "0%",
+          bottom: "0%",
+          paddingInline: "26px",
+          paddingBlock: "16px",
+        }}
+        className="bg-aegean-60 text-white"
+      >
+        <MdOutlineKeyboardArrowRight size={30} />
+      </button>
+    </div>
   );
 }
