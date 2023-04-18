@@ -102,9 +102,12 @@ function WelcomeCertitude() {
           24-hour live-in care, depending upon the requirements of the customer
           and their family.
         </p>
-        <button className="bg-aegean text-sm lg:text-base font-segoe px-6 py-2 w-fit mx-auto mt-10 block">
+        <Link
+          href="/about-us"
+          className="bg-aegean text-sm lg:text-base font-segoe px-6 py-2 w-fit mx-auto mt-10 block"
+        >
           Find Out More
-        </button>
+        </Link>
       </div>
     </section>
   );

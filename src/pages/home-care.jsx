@@ -24,7 +24,7 @@ export default function HomeCare() {
               }}
             />
           </div>
-          <div className="bg-aegean relative w-full mx-auto m:max-w-[500px] p-5 [&>p]:text-sm m:[&>p]:text-base  m:p-10 text-white font-poppins space-y-7 font-light [&_*]:leading-7 top-10 m:-left-7 ml-auto mb-20">
+          <div className="bg-aegean relative w-full m:max-w-[500px] p-5 [&>p]:text-sm m:[&>p]:text-base  m:p-10 text-white font-poppins space-y-7 font-light [&_*]:leading-7 top-10 m:-left-7 ml-auto mb-20">
             <p>
               Home care gives individuals the much deserved extra support,
               reassurance and companionship that may be needed for you to
