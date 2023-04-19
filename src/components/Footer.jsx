@@ -8,14 +8,69 @@ import { GoPrimitiveDot } from "react-icons/go";
 import { BsTwitter } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import Link from "next/link";
+import emailjs from "@emailjs/browser";
+import { MdSend } from "react-icons/md";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Footer() {
-  function Input({ placeholder, type }) {
+  function Input({ placeholder, type, name }) {
     return (
-      <input type={type} placeholder={placeholder} className="p-4 text-black" />
+      <input
+        type={type}
+        placeholder={placeholder}
+        name={name}
+        className="p-4 text-black"
+        required
+      />
     );
   }
+
+  function sendEmail(e) {
+    e.preventDefault();
+    const token = captchaRef.current.getValue();
+    function ClearInputs() {
+      form.current[0].value = "";
+      form.current[1].value = "";
+      form.current[2].value = "";
+      form.current[3].value = "";
+      form.current[5].value = "";
+    }
+    if (!token) {
+      toast.warning("Kindly verify you are not a robot!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        hideProgressBar: true,
+        closeOnClick: true,
+        draggable: true,
+        progress: undefined,
+      });
+      return;
+    }
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+        form.current,
+        process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          ClearInputs();
+          captchaRef.current.reset();
+        },
+        (error) => {
+          console.log(error.text);
+          ClearInputs();
+          captchaRef.current.reset();
+        }
+      );
+  }
+
   const captchaRef = React.useRef(null);
+  const form = React.useRef();
   return (
     <footer className="bg-aegean">
       <div className="w-[89%] max-w-[1700px] mx-auto font-poppins py-10">
@@ -43,6 +98,7 @@ export default function Footer() {
           <h4 className="text-center font-medium text-3xl my-5">
             Contact Us Today
           </h4>
+
           <div className="flex gap-6 justify-between flex-wrap">
             <div className="font-light text-lg">
               <h5 className="text-xl font-semibold">Certitude Care Service</h5>
@@ -63,30 +119,55 @@ export default function Footer() {
                 <p>View Map</p>
               </div>
             </div>
-            <div className=" flex flex-col gap-3 mt-4 w-full md:w-fit">
-              <Input type={"text"} placeholder={"Full Name*"} />
-              <Input type="email" placeholder="Email*" />
-              <Input type="text" placeholder="Phone Number" />
-              <ReCAPTCHA
-                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA}
-                ref={captchaRef}
-              />
-              <div className="flex items-center gap-3">
-                <input
-                  type="checkbox"
-                  name="privacy-policy"
-                  id="privacy-policy"
+            <form
+              className="flex gap-14 justify-between flex-wrap"
+              ref={form}
+              onSubmit={sendEmail}
+            >
+              <div className="flex flex-col gap-3 mt-4 w-full md:w-fit">
+                <Input
+                  type={"text"}
+                  placeholder={"Full Name"}
+                  name={"user_name"}
                 />
-                <label htmlFor="privacy-policy">
-                  I have read and agree to the{" "}
-                  <span className="underline">privacy policy</span>
-                </label>
+                <Input type="email" placeholder="Email" name={"user_email"} />
+                <Input
+                  type="text"
+                  placeholder="Phone Number"
+                  name={"user_phoneNumber"}
+                />
+                <ReCAPTCHA
+                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA}
+                  ref={captchaRef}
+                />
+                <div className="flex items-center gap-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="privacy-policy"
+                    id="privacy-policy"
+                    required
+                  />
+                  <label htmlFor="privacy-policy" className="cursor-pointer">
+                    I have read and agree to the{" "}
+                    <span className="underline">privacy policy</span>
+                  </label>
+                </div>
               </div>
-            </div>
-            <textarea
-              placeholder="Message*"
-              className="p-4 mt-4 h-[200px] w-full md:w-fit text-black"
-            />
+              <div className="flex flex-col w-full md:w-fit gap-3">
+                <textarea
+                  placeholder="Message"
+                  name="user_message"
+                  className="p-4 mt-4 h-[200px] text-black"
+                  required
+                />
+                <button
+                  type="submit"
+                  className="bg-maverick flex items-center gap-2 rounded-md text-sm lg:text-base font-segoe px-10 py-2 w-fit mx-auto"
+                >
+                  Send <MdSend />
+                </button>
+              </div>
+            </form>
           </div>
           <div className="flex item-center gap-5">
             <FaFacebookF />
@@ -131,6 +212,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </footer>
   );
 }
