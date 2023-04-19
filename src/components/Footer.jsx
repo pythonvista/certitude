@@ -41,13 +41,13 @@ export default function Footer() {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
-        hideProgressBar: true,
         closeOnClick: true,
         draggable: true,
         progress: undefined,
       });
       return;
     }
+    const id = toast.loading("Please wait...");
     emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
@@ -58,10 +58,22 @@ export default function Footer() {
       .then(
         (result) => {
           console.log(result.text);
+          toast.update(id, {
+            render: "Message successfully sent!",
+            type: "success",
+            isLoading: false,
+            autoClose: 3000,
+          });
           ClearInputs();
           captchaRef.current.reset();
         },
         (error) => {
+          toast.update(id, {
+            render: "Message not sent!",
+            type: "error",
+            isLoading: false,
+            autoClose: 3000,
+          });
           console.log(error.text);
           ClearInputs();
           captchaRef.current.reset();
