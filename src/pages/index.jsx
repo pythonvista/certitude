@@ -119,28 +119,28 @@ const mainFeatures = [
     img: "/specialist-services.png",
     heading: "Specialist Services",
     "sub-heading":
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has English.",
+      "Our caregivers provide palliative care that is of extraordinarily high caliber while gently allowing our patients to maintain their dignity and ability to live freely.",
   },
   {
     url: "/home-care",
     img: "/home-care.png",
     heading: "Home Care",
     "sub-heading":
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has English.",
+      "Home care gives individuals the much deserved extra support, reassurance and companionship that may be needed for you to continue living at home as independently as is possible.",
   },
   {
     url: "/community-assistant",
     img: "/community-assistant.png",
     heading: "Community Assistant",
     "sub-heading":
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has English.",
+      "We offer a unique choice of flexible home care. Our carers are trained in a wide range of areas and giving the clients confidence to continue living in their own homes all we strive for.",
   },
   {
     url: "/live-in-care",
     img: "/live-in-care.png",
     heading: "Live in Care",
     "sub-heading":
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has English.",
+      "We help you live the life you want on your own terms closer to family and friends. We ensure our personalized approach will provide an unique package of care with a qualified caregiver.",
   },
 ];
 const mainOne = [

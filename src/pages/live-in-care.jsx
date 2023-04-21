@@ -43,7 +43,7 @@ function MainInfo() {
           <p>
             Live-in care helps you live the life you want, on your own terms, in
             your own home, close to family and friends. We ensure that with our
-            person-centred approach, we will put together a unique package of
+            person-centered approach, we will put together a unique package of
             care with a carefully chosen carer. Together, we’ll help you stay in
             the home you know and love.
           </p>

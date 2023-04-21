@@ -16,7 +16,9 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <div className="flex items-center gap-2">
             <BsFillTelephoneFill className="mt-1" />
-            <p className="font-segoe">+447533906575</p>
+            <a href="tel:+447533906575" className="font-segoe block">
+              +447533906575
+            </a>
           </div>
           <FaFacebookF />
           <BsTwitter />
