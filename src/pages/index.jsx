@@ -90,7 +90,7 @@ function WelcomeCertitude() {
         <p className="mb-1">
           Certitude Care Service recognises the importance of community, of
           supporting and influencing how we live within these communities now,
-          in the past and in the future. Reto Care Ltd are proud to be on the
+          in the past and in the future. Certitude Care Ltd are proud to be on the
           Staffordshire/Cheshire boarders; we are the local independent care
           providers of choice.
         </p>

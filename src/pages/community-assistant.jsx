@@ -57,7 +57,7 @@ function MainInfo() {
 
           <p>
             For more information, please contact us using the details on
-            info@retocare.co.uk
+            info@certitudecare.co.uk
           </p>
 
           <h4>What can we provide?</h4>

@@ -28,7 +28,7 @@ export default function TypesOfCare() {
                 also qualify.
               </p>
               <p>
-                Reto care works closely with some local continuing health care
+                Certitude care works closely with some local continuing health care
                 teams to provide such care. Service users are referred to us
                 from local hospitals and hospices and we provided care for them
                 within the comfort of their homes.

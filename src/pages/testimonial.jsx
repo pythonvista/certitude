@@ -49,14 +49,14 @@ function MainInfo() {
         <div className="">
           <p>
             I have seen the care they provide to their clients. It is done with
-            Passion. I love you all Reto care.
+            Passion. I love you all Certitude care.
           </p>
           <h5>F M (London)</h5>
         </div>
 
         <div className="">
           <p>
-            Special thanks to Reto Care for their outstanding support and care
+            Special thanks to Certitude Care for their outstanding support and care
             given.
           </p>
           <h5>D B (Haslington)</h5>
@@ -75,7 +75,7 @@ function MainInfo() {
 
         <div className="">
           <p>
-            Bryan and family expressed their sincere thanks to all at Reto Care.
+            Bryan and family expressed their sincere thanks to all at Certitude Care.
             For taking care of Pat when she was alive. Special thanks are given
             to Beatrice for her diligent care and friendship to Pat.
           </p>
@@ -113,7 +113,7 @@ function MainInfo() {
 
         <div className="">
           <p>
-            We had care provided by Reto Care for my mother through
+            We had care provided by Certitude Care for my mother through
             Hertfordshire CCG. The care was of an excellent standard and we
             would recommend this agency and in fact have recommended them to
             people. The care provided was of the highest standard and delivered
