@@ -1,0 +1,19 @@
+---
+  deployment
+    tasks:
+      -exports DEPLOYPATH=/home2/ubclickc/public_html
+      -/bin/cp -R * $DEPLOYPATH
+      -/bin/cp -R .next $DEPLOYPATH
+      -/bin/cp -R public $DEPLOYPATH
+      -/bin/cp -R src $DEPLOYPATH
+      -/bin/cp .env.local $DEPLOYPATH
+      -/bin/cp .env.production $DEPLOYPATH
+      -/bin/cp .env.development $DEPLOYPATH
+      -/bin/cp .eslintrc $DEPLOYPATH
+      -/bin/cp jsconfig.json $DEPLOYPATH
+      -/bin/cp next.config.js $DEPLOYPATH
+      -/bin/cp package.json $DEPLOYPATH
+      -/bin/cp package-lock.json $DEPLOYPATH
+      -/bin/cp postcss.config.js $DEPLOYPATH
+      -/bin/cp server.js $DEPLOYPATH
+      -/bin/cp tailwind.config.js $DEPLOYPATH
