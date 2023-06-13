@@ -28,7 +28,7 @@ export default function Footer() {
 
   function sendEmail(e) {
     e.preventDefault();
-    const token = captchaRef.current.getValue();
+    // const token = captchaRef.current.getValue();
     function ClearInputs() {
       form.current[0].value = "";
       form.current[1].value = "";
@@ -65,7 +65,7 @@ export default function Footer() {
             autoClose: 3000,
           });
           ClearInputs();
-          captchaRef.current.reset();
+          // captchaRef.current.reset();
         },
         (error) => {
           toast.update(id, {
@@ -208,19 +208,12 @@ export default function Footer() {
                   name: "Contact Us",
                   url: "/contact-us",
                 },
-                // {
-                //   name: "Testimonials",
-                //   url: "/testimonial",
-                // },
               ].map((item) => (
                 <li key={item.name}>
                   <Link href={item.url}>{item.name}</Link>
                 </li>
               ))}
             </ul>
-            {/* <a href="https://linktr.ee/eniolayo" target="_blank">
-              Built by Ayodeji Ikujuni
-            </a> */}
           </div>
         </div>
       </div>
