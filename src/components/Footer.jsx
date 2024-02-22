@@ -76,8 +76,8 @@ export default function Footer() {
           });
           console.log(error.text);
           ClearInputs();
-          // captchaRef.current.reset();
         }
+        // captchaRef.current.reset();
       );
   }
 
