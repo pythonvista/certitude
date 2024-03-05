@@ -28,7 +28,7 @@ export default function Footer() {
 
   function sendEmail(e) {
     e.preventDefault();
-    const token = captchaRef.current.getValue();
+    // const token = captchaRef.current.getValue();
     function ClearInputs() {
       form.current[0].value = "";
       form.current[1].value = "";
@@ -36,17 +36,17 @@ export default function Footer() {
       form.current[3].value = "";
       form.current[5].value = "";
     }
-    if (!token) {
-      toast.warning("Kindly verify you are not a robot!", {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        draggable: true,
-        progress: undefined,
-      });
-      return;
-    }
+    // if (!token) {
+    //   toast.warning("Kindly verify you are not a robot!", {
+    //     position: "top-right",
+    //     autoClose: 3000,
+    //     hideProgressBar: false,
+    //     closeOnClick: true,
+    //     draggable: true,
+    //     progress: undefined,
+    //   });
+    //   return;
+    // }
     const id = toast.loading("Please wait...");
     emailjs
       .sendForm(
@@ -65,7 +65,7 @@ export default function Footer() {
             autoClose: 3000,
           });
           ClearInputs();
-          captchaRef.current.reset();
+          // captchaRef.current.reset();
         },
         (error) => {
           toast.update(id, {
@@ -76,8 +76,8 @@ export default function Footer() {
           });
           console.log(error.text);
           ClearInputs();
-          captchaRef.current.reset();
         }
+        // captchaRef.current.reset();
       );
   }
 
@@ -148,10 +148,10 @@ export default function Footer() {
                   placeholder="Phone Number"
                   name={"user_phoneNumber"}
                 />
-                <ReCAPTCHA
+                {/* <ReCAPTCHA
                   sitekey={process.env.NEXT_PUBLIC_RECAPTCHA}
                   ref={captchaRef}
-                />
+                /> */}
                 <div className="flex items-center gap-3 cursor-pointer">
                   <input
                     type="checkbox"
@@ -208,19 +208,12 @@ export default function Footer() {
                   name: "Contact Us",
                   url: "/contact-us",
                 },
-                // {
-                //   name: "Testimonials",
-                //   url: "/testimonial",
-                // },
               ].map((item) => (
                 <li key={item.name}>
                   <Link href={item.url}>{item.name}</Link>
                 </li>
               ))}
             </ul>
-            <a href="https://linktr.ee/eniolayo" target="_blank">
-              Built by Ayodeji Ikujuni
-            </a>
           </div>
         </div>
       </div>
